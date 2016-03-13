@@ -25,6 +25,7 @@ public class TondeuseTest {
 
     /**
      * Initialisation des paramètres nécessaires pour les tests.
+     *
      * @throws Exception
      */
     @Before
@@ -99,7 +100,8 @@ public class TondeuseTest {
     }
 
     /**
-     *  Nettoyage des paramètres nécessaires pour les tests.
+     * Nettoyage des paramètres nécessaires pour les tests.
+     *
      * @throws Exception
      */
     @After

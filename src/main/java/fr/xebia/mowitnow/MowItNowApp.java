@@ -90,8 +90,6 @@ public class MowItNowApp {
 
             terrain = new Terrain(longueurTerrain, largeurTerrain);
 
-            String lignePositionInitialTondeuse;
-            String instructionTondeuse;
             while (iterateurListeLigneFichier.hasNext()) {
 
 
