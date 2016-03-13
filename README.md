@@ -43,8 +43,8 @@ On attend le résultat suivant (position finale des tondeuses) :
 NB: Les données en entrée peuvent être injectée sous une autre forme qu'un fichier (par exemple un test automatisé).
 
 # Compilation
-Lancez la commande "mvn clean install"
+Lancez la commande mvn clean install
 
 # Lancement
-Lancez la commande "java -jar MowItNow.jar <filename>"
+Lancez la commande java -jar MowItNow.jar filename
 
