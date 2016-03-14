@@ -50,4 +50,4 @@ Lancez la commande java -jar MowItNow.jar filename
 
 # Intégration continue
 Build et tests unitaires automatiques lors d'un commit avec Strider-CD installé sur une instance EC2 d'AmazonWebServices.
-Strider-CD est consultable à l'adresse suivante http://ec2-54-93-65-242.eu-central-1.compute.amazonaws.com:3000
+Strider-CD est consultable à l'adresse suivante http://ec2-54-93-182-65.eu-central-1.compute.amazonaws.com:3000
