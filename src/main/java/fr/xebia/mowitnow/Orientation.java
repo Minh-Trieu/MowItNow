@@ -7,53 +7,43 @@ package fr.xebia.mowitnow;
  */
 public enum Orientation {
 
-    N, E, W, S;
-
-    /**
-     * Retourne l'orientation à -90° de l'orientation actuelle.
-     * @return Orientation
-     */
-    public Orientation recupererOrientationAGauche() {
-        switch (this) {
-
-            case N:
-                return Orientation.W;
-
-            case E:
-                return Orientation.N;
-
-            case W:
-                return Orientation.S;
-
-            case S:
-                return Orientation.E;
-
-            default:
-                return null;
+    N {
+        public Orientation recupererOrientationAGauche() {
+            return W;
         }
-    }
 
-    /**
-     * Retourne l'orientation à 90° de l'orientation actuelle.
-     * @return Orientation
-     */
-    public Orientation recupererOrientationADroite() {
-        switch (this) {
-
-            case N:
-                return Orientation.E;
-
-            case E:
-                return Orientation.S;
-
-            case W:
-                return Orientation.N;
-
-            case S:
-                return Orientation.W;
-
-            default:
-                return null;
+        public Orientation recupererOrientationADroite() {
+            return E;
         }
-    }
+    }, E {
+        public Orientation recupererOrientationAGauche() {
+            return N;
+        }
+
+        public Orientation recupererOrientationADroite() {
+            return S;
+        }
+    }, S {
+        public Orientation recupererOrientationAGauche() {
+            return E;
+        }
+
+        public Orientation recupererOrientationADroite() {
+            return W;
+        }
+    }, W {
+        public Orientation recupererOrientationAGauche() {
+            return S;
+        }
+
+        public Orientation recupererOrientationADroite() {
+            return N;
+        }
+    };
+
+    public abstract Orientation recupererOrientationAGauche();
+
+    public abstract Orientation recupererOrientationADroite();
+
+
 }

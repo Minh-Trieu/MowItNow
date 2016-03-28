@@ -25,7 +25,6 @@ public class TondeuseTest {
 
     /**
      * Initialisation des paramètres nécessaires pour les tests.
-     *
      * @throws Exception
      */
     @Before
@@ -100,13 +99,15 @@ public class TondeuseTest {
     }
 
     /**
-     * Nettoyage des paramètres nécessaires pour les tests.
-     *
+     *  Nettoyage des paramètres nécessaires pour les tests.
      * @throws Exception
      */
     @After
     public void nettoyer() throws Exception {
         tondeuseCasExemple = null;
+        tondeuseCasExemple2 = null;
+        tondeuseCasSortieTerrain = null;
+        tondeuseCasCollisionTondeuse = null;
         terrain = null;
     }
 

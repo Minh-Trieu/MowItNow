@@ -14,15 +14,15 @@ public class Tondeuse {
     private ArrayList<Instruction> instructions;
 
     public Tondeuse(Position position, Orientation orientation, ArrayList<Instruction> instructions) throws IllegalArgumentException {
-        if (null == position) {
+        if(null == position) {
             throw new IllegalArgumentException("Position de tondeuse incorrecte.");
         }
 
-        if (null == orientation) {
+        if(null == orientation) {
             throw new IllegalArgumentException("orientation de tondeuse incorrecte.");
         }
 
-        if (null == instructions) {
+        if(null == instructions) {
             this.instructions = new ArrayList<Instruction>();
         } else {
             this.instructions = instructions;
@@ -49,12 +49,11 @@ public class Tondeuse {
 
     /**
      * Permet d'exécuter la série d'instruction affecté à une tondeuse.
-     *
      * @param terrain
      * @throws IllegalArgumentException
      */
     public void executerInstructions(Terrain terrain) throws IllegalArgumentException {
-        if (null == terrain) {
+        if(null == terrain) {
             throw new IllegalArgumentException("Terrain invalide.");
         }
 
@@ -66,29 +65,25 @@ public class Tondeuse {
     }
 
     /**
-     * Permet d'exécuter une instruction unique et de modifier la position de la tondeuse si elle est valide.
-     *
+     *  Permet d'exécuter une instruction unique et de modifier la position de la tondeuse si elle est valide.
      * @param instruction
      * @param terrain
      * @throws IllegalArgumentException
      */
     private void executerInstruction(Instruction instruction, Terrain terrain) throws IllegalArgumentException {
-        if (null == instruction) {
-            throw new IllegalArgumentException("Instruction invalide.");
-        }
         switch (instruction) {
-            case A:
+            case A :
                 Position prochainePosition = recupererProchainEmplacement();
                 if (terrain.emplacementEstValide(prochainePosition.getCoordonneeX(), prochainePosition.getCoordonneeY())) {
                     this.position = prochainePosition;
                 }
                 break;
 
-            case G:
+            case G :
                 this.orientation = this.orientation.recupererOrientationAGauche();
                 break;
 
-            case D:
+            case D :
                 this.orientation = this.orientation.recupererOrientationADroite();
                 break;
 
@@ -101,26 +96,25 @@ public class Tondeuse {
 
     /**
      * Permet de récupérer la position qu'induirait un déplacement.
-     *
      * @return
      */
     private Position recupererProchainEmplacement() throws IllegalArgumentException {
         Position prochainePosition = null;
         switch (this.orientation) {
 
-            case N:
+            case N :
                 prochainePosition = new Position(0, 1);
                 break;
 
-            case E:
+            case E :
                 prochainePosition = new Position(1, 0);
                 break;
 
-            case W:
+            case W :
                 prochainePosition = new Position(-1, 0);
                 break;
 
-            case S:
+            case S :
                 prochainePosition = new Position(0, -1);
                 break;
 

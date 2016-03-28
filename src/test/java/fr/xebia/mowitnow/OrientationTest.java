@@ -18,7 +18,6 @@ public class OrientationTest {
     @Test
     public void testRecupererOrientationAGauche() {
         Orientation orientation = Orientation.N;
-        assertEquals(orientation, Orientation.N);
         orientation = orientation.recupererOrientationAGauche();
         assertEquals(orientation, Orientation.W);
         orientation = orientation.recupererOrientationAGauche();
